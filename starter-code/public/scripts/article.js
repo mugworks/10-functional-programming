@@ -62,7 +62,7 @@ var app = app || {};
       )
   };
 
-  // TODO: Chain together a `map` and a `reduce` call to get a rough count of all words in all articles.
+  // DONE: Chain together a `map` and a `reduce` call to get a rough count of all words in all articles.
   Article.numWordsAll = () => {
     return Article.all.map(article => article.body).reduce((totalWords, current)=> totalWords + current.split(' ').length, 0); 
   };
@@ -81,7 +81,7 @@ var app = app || {};
       return { name: author,
         wordsBy: app.Article.all.filter(article => article.author === author).map(article => article.body).reduce((totalWords, current)=> totalWords + current.split(' ').length, 0)};
 
-      // TODO: Transform each author string into an object with properties for
+      // DONE: Transform each author string into an object with properties for
       // the author's name, as well as the total number of words across all articles
       // written by the specified author.
       // HINT: This .map should be setup to return an object literal with two properties.
