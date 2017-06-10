@@ -127,7 +127,7 @@ var app = app || {};
 
   articleView.initIndexPage = function() {
     app.Article.all.forEach(a => $('#articles').append(a.toHtml()));
-
+    console.log('list of authors words', app.Article.numWordsByAuthor());
     articleView.populateFilters();
     articleView.handleCategoryFilter();
     articleView.handleAuthorFilter();
